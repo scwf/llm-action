@@ -255,7 +255,13 @@ MCP的工作原理可以从以下几个方面来理解：
 
 通过这个对比示例，我们可以清楚地看到MCP在简化开发流程、提高代码质量和增强可维护性等方面带来的显著改进。
 
-### 2.4 与Function Calling的关系
+### 2.4 MCP的架构
+MCP的架构如下图所示：![](refer/mcp.png)
+
+
+来源：https://modelcontextprotocol.io/introduction
+
+### 2.5 与Function Calling的关系
 
 MCP是对Function Calling机制的进一步标准化和扩展：
 
