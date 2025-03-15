@@ -78,7 +78,7 @@ mcp install weather_server.py --name "我的天气助手"
 
 ```
 如果你想先测试你的服务器，可以使用 MCP Inspector：
-
+mcp dev weather_server.py
 ```
 这将启动一个交互式界面，你可以在其中测试你的资源、工具和提示。
 
