@@ -261,6 +261,12 @@ MCP的架构如下图所示：![](refer/mcp.png)
 
 来源：https://modelcontextprotocol.io/introduction
 
+
+形象一点，我们可以这么来看, 其中mcp server一般是nodejs或者python实现的服务侧代码
+
+![](refer/mcp-servers-1.png)
+
+
 ### 2.5 与Function Calling的关系
 
 MCP是对Function Calling机制的进一步标准化和扩展：
@@ -281,3 +287,31 @@ MCP是对Function Calling机制的进一步标准化和扩展：
    - 开发者可以快速接入第三方API
    - 支持本地和远程服务的统一管理
    - 便于构建可扩展的AI应用
+
+### 2.6 cursor里面实操MCP
+
+#### 1. 首先在代码工程下面创建.cursor目录，然后在cursor目录下创建mcp配置文件mcp.json
+
+#### 2. 在json文件中配置相应的mcpserver配置，这里我配置的是github的server，目前业界已经有很多公开的mcpserver了，大家可以去github官方的server库选择需要的https://github.com/modelcontextprotocol/servers， 这里我选择了github的mcpserver，主要用来操作github代码库。
+
+![](refer/cursor-config-mcp.png)
+
+#### 3. 配置好后，打开cursor的setting，选择mcp，enable 刚才配置好的mcp server,并点击refresh，注意这里会弹出一个黑色命令行窗口，切记不要关闭（本质就是启动的mcpserver）
+![](refer/cursor-config-mcp-1.png)
+
+#### 4. 可以在cursor里面对话使用mcpserver了，这里需要选择agent模式，当你问你在github上有哪些代码仓时，会自动调用对应的mcpserver来回答你的问题
+![](refer/cursor-mcp-result.png)
+
+#### 5. 上述只是一个通过npx命令执行的mcpserver，实际上也可以安装python的mcpserver，其命令cmd传入参数换一下即可，改为python。比如如下是一个python的mcpserver配置，供参考
+
+![](refer/python-mcp.png)
+
+
+### 2.7 MCP资源
+
+目前业界公开的mcp资源有：
+
+#### https://smithery.ai/  资源非常全，有超过2000个mcp服务
+
+#### https://github.com/modelcontextprotocol/servers
+ 
