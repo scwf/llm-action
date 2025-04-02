@@ -1,6 +1,6 @@
-# Cursor rules最佳实践
+# cursor rules最佳实践
 
-随着人工智能技术的进步，**Cursor AI** 已成为帮助开发者优化工作流程的游戏规则改变者。本文将聚焦于如何在最新版本中使用**Cursor规则**，特别是通过`.cursor/rules`目录定义特定规则的**mdc文件**。这些规则不仅能提升代码质量，还能增强可维护性和整体开发效率。
+随着人工智能技术的进步，**Cursor** 已成为帮助开发者优化工作流程的游戏规则改变者。本文将聚焦于如何在最新版本中使用**Cursor Rules**，特别是通过`.cursor/rules`目录定义特定规则的**mdc文件**。这些规则不仅能提升代码质量，还能增强可维护性和整体开发效率。
 
 本文将讨论如何定义和设置Cursor规则、不同规则模式（如manual、always和globs）的优势，并分享最佳实践，帮助开发者充分发挥这些工具的潜力。
 
@@ -26,14 +26,14 @@ Cursor规则目前通过`.cursor/rules`目录下的**mdc文件**来进行配置�
 
 ### 如何设置Cursor规则
 
-1. **创建.cursor/rules目录**：这个目录用于存放规则文件（例如`01.mdc`、`02.mdc`）。
+1. **创建.cursor/rules目录**：这个目录用于存放规则文件（例如`01-java.mdc`、`02-mysql.mdc`）。
 2. **定义规则**：在`.cursor/rules`目录下创建**mdc文件**。每个文件包含项目的特定规则，如命名规范、代码结构等。
 3. **选择规则模式**：
    - **Manual模式**：在该模式下，规则仅在开发者手动调用时应用。
    - **Always模式**：此模式会确保每次AI生成或修改代码时自动应用规则。
    - **Globs模式**：规则可应用于指定的文件或目录，提供灵活性以根据项目的不同部分实施规则 ([Learn Cursor](https://learn-cursor.com/en/rules))。
 
-完成规则定义后，开发者可以使用`./apply-rules.sh`脚本将这些规则应用到项目中，确保AI生成的代码符合预设的标准 ([Forum Cursor](https://forum.cursor.com/t/enable-agent-to-update-cursor-rules/49119))。
+完成规则定义后，Cursor会自动应用这些规则到项目中，确保AI生成的代码符合预设的标准。开发者可以在编辑器中实时看到规则的应用效果，并根据需要进行调整。
 
 ## 3. Cursor规则最佳实践
 
@@ -45,14 +45,14 @@ Cursor规则目前通过`.cursor/rules`目录下的**mdc文件**来进行配置�
 
 为了加速规则设置过程，开发者可以借鉴社区中已有的Cursor规则。这些规则通常已经根据不同的编程语言和项目需求进行了优化。以下是一些推荐的GitHub仓库：
 
-- **Cursor规则集合**：这是一个包含多种Cursor规则的仓库，可以根据不同的开发环境和编码实践进行修改。
-- **Prompt Optimizer**：一个专注于优化提示词的仓库，提供如何构建高效规则的有用示例。
+- **awesome-cursorrules**：由PatrickJS维护的仓库，收集了各种Cursor规则示例和模板，涵盖多种编程语言和框架，可以根据不同的开发环境和编码实践进行修改。[GitHub链接](https://github.com/PatrickJS/awesome-cursorrules)
+- **awesome-cursor-rules-mdc**：由sanjeed5创建的仓库，专注于mdc格式的Cursor规则集合，提供了多种实用规则模板和最佳实践示例，帮助开发者快速构建高效的规则系统。[GitHub链接](https://github.com/sanjeed5/awesome-cursor-rules-mdc)
 
-通过使用这些资源，开发者可以节省时间，并确保他们的项目符合最佳实践 ([GitHub](https://github.com/linshenkx/prompt-optimizer))。
+对于提示词，也可以通过使用github资源，节省时间，写出更好的提示词 ([GitHub](https://github.com/linshenkx/prompt-optimizer))。
 
 ### 3.3 使用AI持续迭代Cursor规则
 
-Cursor规则的一个主要优势是它们能够随着项目的进展不断演变。随着开发的推进，开发者应该定期检查和更新这些规则，以确保它们继续适应项目的变化。使用**always**和**globs**模式可以确保规则在新文件加入时依然得到应用，保持代码的一致性和高质量。这种持续迭代的过程确保了AI生成的代码符合团队的标准，并且在项目不断扩展时保持一致性和可维护性 ([Pragmatic Coders](https://www.pragmaticcoders.com/blog/cursor-ai-for-software-development))。
+另外一个技巧是，通过cursor的ai大模型持续迭代优化rules，每当我们开发过程解决一类问题，发现一个好的模式或者规则，此时都可以让ai自动取更新下rule或者增加一个新的rule。 [[You are using Cursor AI incorrectly](https://ghuntley.com/stdlib/)]。
 
 ## 4. 结论
 
