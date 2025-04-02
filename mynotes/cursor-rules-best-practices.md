@@ -69,4 +69,4 @@ Cursor规则的一个主要优势是它们能够随着项目的进展不断演�
 3. [Learn Cursor](https://learn-cursor.com/en/rules)
 4. [Forum Cursor](https://forum.cursor.com/t/enable-agent-to-update-cursor-rules/49119)
 5. [Builder.io](https://www.builder.io/blog/cursor-tips)
-6. [GitHub: Prompt Optimizer](https://github.com/linshenkx/prompt-optimizer)
+6. [GitHub: Prompt Optimizer](https://github.com/linshenkx/prompt-optimizer) 
