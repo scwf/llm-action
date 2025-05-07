@@ -13,6 +13,7 @@
 | **CosyVoice 2‑0.5B** | ✔ 中文及方言 ([GitHub][12])              | ✔ Cross‑lingual 零样本克隆 ([GitHub][12])                     | ✔ Apache‑2.0 代码 ([GitHub][12])            | 
 | **MegaTTS 3**        | ✔ 中英双语 ([GitHub][13])               | **部分支持**：需上传 20 秒音频获得 .npy latent 后可本地克隆 ([GitHub][13])  | ✔ Apache‑2.0 代码；权重开放 ([GitHub][13])       | 
 | **Seed‑TTS**         | ✔ 论文与评测集含中文 ([BytedanceSpeech][14]) | ✔ 论文宣称零样本，但**未开源模型** ([GitHub][15])                      | ✖ 仅公开测试集，无法本地部署 ([GitHub][15])            |
+| **LLaSA 3B**         | ✔ 支持中文  | ✔ 支持零样本声音克隆                      | 支持本地部署        |
 
 ---
 
