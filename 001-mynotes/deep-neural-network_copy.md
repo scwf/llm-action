@@ -166,8 +166,8 @@
     $$\hat{v}_t = \frac{v_t}{1-\beta_2^t}$$
 
     $$w_{t+1} = w_t - \frac{\eta}{\sqrt{\hat{v}_t} + \epsilon} \hat{m}_t$$
-    
-        (注意：$g_t^2$ 表示 $g_t \odot g_t$)
+
+    (注意：$g_t^2$ 表示 $g_t \odot g_t$)
 *   **特点**: 计算高效，内存需求小，对梯度缩放不变，通常是各种任务的默认首选。
 ##### **学习率调度 (Learning Rate Scheduling / Annealing)**:
 *   **概念**: 在训练过程中动态调整学习率 $\eta$。
