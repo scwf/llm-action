@@ -158,10 +158,15 @@
 *   **概念**: 结合了 Momentum (一阶矩估计) 和 RMSProp (二阶矩估计) 的优点。是目前最常用的优化器之一。
 *   **原理**: 同时维护梯度的指数加权移动平均 (一阶矩 $m_t$) 和梯度平方的指数加权移动平均 (二阶矩 $v_t$)，并进行偏差修正。
     $$m_t = \beta_1 m_{t-1} + (1-\beta_1)g_t$$
+
     $$v_t = \beta_2 v_{t-1} + (1-\beta_2)g_t^2$$
+
     $$\hat{m}_t = \frac{m_t}{1-\beta_1^t}$$
+
     $$\hat{v}_t = \frac{v_t}{1-\beta_2^t}$$
+
     $$w_{t+1} = w_t - \frac{\eta}{\sqrt{\hat{v}_t} + \epsilon} \hat{m}_t$$
+    
         (注意：$g_t^2$ 表示 $g_t \odot g_t$)
 *   **特点**: 计算高效，内存需求小，对梯度缩放不变，通常是各种任务的默认首选。
 ##### **学习率调度 (Learning Rate Scheduling / Annealing)**:
